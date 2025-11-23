@@ -1,0 +1,140 @@
+:root {
+  --bg: #0f0f0f;
+  --fg: #00ffcc;
+  --accent: #ff00ff;
+  --link: #00ffff;
+  --maxw: 900px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cv {
+  max-width: var(--maxw);
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.cv-info {
+  flex: 1;
+}
+
+.cv-header h1 {
+  font-size: 32px;
+  margin: 0;
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--accent);
+}
+
+.subtitle {
+  font-weight: bold;
+  color: var(--link);
+  margin: 4px 0 12px;
+}
+
+.contact {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 24px;
+  color: var(--accent);
+  text-shadow: 0 0 3px var(--accent);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li {
+  background: #1a1a1a;
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.tech-logos img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+  filter: drop-shadow(0 0 2px var(--accent));
+}
+
+.tech-logos img:hover {
+  transform: scale(1.2);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+  }
+
+  .cv {
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-pic {
+    border: none;
+  }
+
+  a::after {
+    content: "";
+  }
+}
